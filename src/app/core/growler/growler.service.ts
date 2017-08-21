@@ -1,12 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core'
 
 @Injectable()
 export class GrowlerService {
-    
-    constructor() { }
 
-    growl: (message: string, growlType: GrowlerMessageType) => number;
+    constructor() {/* ignore */}
 
+    growl: (message: string, growlType: GrowlerMessageType) => number
 }
 
 export enum GrowlerMessageType {

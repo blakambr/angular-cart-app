@@ -1,4 +1,4 @@
-import { Directive, Input, Output, EventEmitter } from '@angular/core';
+import { Directive, Input, Output, EventEmitter } from '@angular/core'
 
 @Directive({
   selector: '[cm-sort-by]',
@@ -7,22 +7,21 @@ import { Directive, Input, Output, EventEmitter } from '@angular/core';
   }
 })
 export class SortByDirective {
-	
-	private sortProperty: string;
-  
+
+	private sortProperty: string
+
   @Output()
-	sorted: EventEmitter<string> = new EventEmitter<string>();
-	
-  constructor() { }
-    
-  @Input('cm-sort-by') 
+	sorted: EventEmitter<string> = new EventEmitter<string>()
+
+  constructor() {/*ignore*/}
+
+  @Input('cm-sort-by')
   set sortBy(value: string) {
-    this.sortProperty = value;
+    this.sortProperty = value
   }
 
   onClick(event: any) {
-    event.preventDefault();
-    this.sorted.next(this.sortProperty); //Raise clicked event
+    event.preventDefault()
+    this.sorted.next(this.sortProperty) //Raise clicked event
   }
-
 }

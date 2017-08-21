@@ -1,0 +1,35 @@
+<div class="items view indent">
+    <div class="container">
+        <header>
+            <h3>
+                <span class="glyphicon glyphicon-user"></span>
+                {{ title }}
+            </h3>
+        </header>
+        <br />
+        <div class="row">
+            <div class="col-md-10">
+                <div class="navbar">
+                    <ul class="nav navbar-nav">
+                        <li class="toolbar-item">
+                            <a routerLink="/items/0/edit">
+                                <span class="glyphicon glyphicon-plus"></span> New Item
+                            </a>
+                        </li>
+                    </ul>
+                    <cm-filter-textbox class="navbar-right"
+                     (changed)="filterChanged($event)"></cm-filter-textbox>
+                </div>
+            </div>
+        </div>
+        
+        <cm-items-card 
+          [items]="filteredItems" 
+          [hidden]="displayMode !== displayModeEnum.Card"></cm-items-card>
+
+        <cm-pagination
+            [totalItems]="totalRecords"
+            [pageSize]="pageSize"
+            (pageChanged)="pageChanged($event)"></cm-pagination>
+    </div>
+</div>

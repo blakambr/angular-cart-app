@@ -1,19 +1,18 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core'
 
 @Injectable()
 export class DialogService {
 
-  promise: Promise<boolean>;
-  message: string = 'Is it OK?';
+  promise: Promise<boolean>
+  message: string = 'Is it OK?'
 
   confirm(message?: string) {
-    if (message) { this.message = message };
-    this.promise = new Promise<boolean>(this.resolver);
-    return this.promise;
-  };
+    if (message) { this.message = message }
+    this.promise = new Promise<boolean>(this.resolver)
+    return this.promise
+  }
 
   resolver(resolve: any) {
-      return resolve(window.confirm('Is it OK?'));
+      return resolve(window.confirm('Is it OK?'))
   }
-  
 }

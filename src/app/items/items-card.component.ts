@@ -1,14 +1,14 @@
 import { Component, Input, OnInit, ChangeDetectionStrategy,
          trigger, state, style, transition, animate } from '@angular/core'
 
-import { ICustomer } from '../shared/interfaces'
+import { IItem } from '../shared/interfaces'
 import { TrackByService } from '../core/services/trackby.service'
 
 @Component({
   moduleId: module.id,
-  selector: 'cm-customers-card',
-  templateUrl: 'customers-card.component.html',
-  styleUrls: [ 'customers-card.component.css' ],
+  selector: 'cm-items-card',
+  templateUrl: 'items-card.component.html',
+  styleUrls: [ 'items-card.component.css' ],
   //Add [@flyInOut]="'in'" into template on card
   // animations: [
   //   trigger('flyInOut', [
@@ -27,9 +27,9 @@ import { TrackByService } from '../core/services/trackby.service'
   //an event, or when an observable fires an event ~ Victor Savkin (Angular Team)
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CustomersCardComponent implements OnInit {
+export class ItemsCardComponent implements OnInit {
 
-  @Input() customers: ICustomer[] = []
+  @Input() items: IItem[] = []
 
   constructor(public trackbyService: TrackByService) { }
 

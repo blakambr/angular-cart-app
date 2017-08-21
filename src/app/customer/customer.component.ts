@@ -1,16 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core'
+import { Router } from '@angular/router'
 
-@Component({ 
+@Component({
   moduleId: module.id,
   selector: 'cm-orders',
   templateUrl: 'customer.component.html'
 })
 export class CustomerComponent implements OnInit {
-  
+
     //displayMode: CustomerDisplayModeEnum;
     //displayModeEnum = CustomerDisplayModeEnum;
-  
+
     constructor(private router: Router) { }
 
     ngOnInit() {

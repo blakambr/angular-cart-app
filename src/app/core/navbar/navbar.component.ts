@@ -1,10 +1,10 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, OnDestroy } from '@angular/core'
+import { Router } from '@angular/router'
 
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs/Subscription'
 
-import { AuthService } from '../services/auth.service';
-import { GrowlerService, GrowlerMessageType } from '../growler/growler.service';
+import { AuthService } from '../services/auth.service'
+import { GrowlerService, GrowlerMessageType } from '../growler/growler.service'
 
 @Component({
     moduleId: module.id,
@@ -13,45 +13,44 @@ import { GrowlerService, GrowlerMessageType } from '../growler/growler.service';
 })
 export class NavbarComponent implements OnInit, OnDestroy {
 
-    isCollapsed: boolean;
-    loginLogoutText: string = 'Login';
-    sub: Subscription;
+    isCollapsed: boolean
+    loginLogoutText: string = 'Login'
+    sub: Subscription
 
     constructor(private router: Router, private authservice: AuthService, private growler: GrowlerService) { }
 
-    ngOnInit() { 
+    ngOnInit() {
         this.sub = this.authservice.authChanged
             .subscribe((loggedIn: boolean) => {
-                this.setLoginLogoutText();
+                this.setLoginLogoutText()
             },
-            (err: any) => console.log(err));
+            (err: any) => console.log(err))
     }
 
     ngOnDestroy() {
-        this.sub.unsubscribe();
+        this.sub.unsubscribe()
     }
 
     loginOrOut() {
-        const isAuthenticated = this.authservice.isAuthenticated;
+        const isAuthenticated = this.authservice.isAuthenticated
         if (isAuthenticated) {
             this.authservice.logout()
                 .subscribe((status: boolean) => {
-                    this.setLoginLogoutText();
-                    this.growler.growl('Logged Out', GrowlerMessageType.Info);
-                    this.router.navigate(['/customers']);
-                    return;
+                    this.setLoginLogoutText()
+                    this.growler.growl('Logged Out', GrowlerMessageType.Info)
+                    this.router.navigate(['/customers'])
+                    return
                 },
-                (err: any) => console.log(err));
+                (err: any) => console.log(err))
         }
-        this.redirectToLogin();
+        this.redirectToLogin()
     }
-    
+
     redirectToLogin() {
-        this.router.navigate(['/login']);
+        this.router.navigate(['/login'])
     }
 
     setLoginLogoutText() {
-        this.loginLogoutText = (this.authservice.isAuthenticated) ? 'Logout' : 'Login';
+        this.loginLogoutText = (this.authservice.isAuthenticated) ? 'Logout' : 'Login'
     }
-
 }

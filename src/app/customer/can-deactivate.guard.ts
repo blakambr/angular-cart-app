@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
-import { CanDeactivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
-import { Observable }    from 'rxjs/Observable';
+import { Injectable } from '@angular/core'
+import { CanDeactivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router'
+import { Observable } from 'rxjs/Observable'
 
-import { CustomerEditComponent } from './customer-edit.component';
+import { CustomerEditComponent } from './customer-edit.component'
 
 @Injectable()
 export class CanDeactivateGuard implements CanDeactivate<CustomerEditComponent> {
@@ -13,9 +13,9 @@ export class CanDeactivateGuard implements CanDeactivate<CustomerEditComponent> 
     state: RouterStateSnapshot
   ): Observable<boolean> | Promise<boolean> | boolean {
 
-    console.log(`CustomerId: ${route.parent.params['id']} URL: ${state.url}`);
+    console.log(`CustomerId: ${route.parent.params['id']} URL: ${state.url}`)
 
     //Check with component to see if we're able to deactivate
-    return component.canDeactivate();
+    return component.canDeactivate()
   }
 }
