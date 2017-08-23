@@ -38,7 +38,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
                 .subscribe((status: boolean) => {
                     this.setLoginLogoutText()
                     this.growler.growl('Logged Out', GrowlerMessageType.Info)
-                    this.router.navigate(['/customers'])
+                    this.router.navigate(['/items'])
                     return
                 },
                 (err: any) => console.log(err))

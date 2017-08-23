@@ -21,6 +21,7 @@ export interface IItem {
     description: string
     price: number
     stock: number
+    image: string
 }
 
 export interface IState {

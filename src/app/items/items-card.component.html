@@ -1,12 +1,15 @@
 <div class="row">
-    <div class="col s6 m4 l2" *ngFor="let item of items;trackBy:trackbyService.item">
+    <div class="col s12 m6 l4" *ngFor="let item of items;trackBy:trackbyService.item">
         <div class="card">
             <div class="card-image">
-                <img src="images/male.png">
+                <img src="{{ item.image }}" width="100px" height="250px">
             </div>
+            <hr style="margin:0px">
             <div class="card-content">
-                <pre>{{ item.name | capitalize }}</pre>
-                <p>{{ item.description }}</p>
+                <div>
+                    <b>{{ item.name | capitalize }}</b>
+                    <b class="right">${{ item.price | number:'1.2' }}</b>
+                </div>
             </div>
         </div>
     </div>

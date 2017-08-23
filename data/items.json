@@ -2,50 +2,57 @@
   {
     "id": 1,
     "name": "Jelly Donut",
-    "description": "yummy yummy yummy",
-    "price": 99.90,
-    "stock": 10
+    "description": "A jelly (or jam) doughnut is a doughnut filled with jelly filling.",
+    "price": 2.00,
+    "stock": 12,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Jelly-Donut.jpg/1200px-Jelly-Donut.jpg"
   },
   {
     "id": 2,
     "name": "Tea",
-    "description": "yummy yummy yummy",
-    "price": 99.90,
-    "stock": 10
+    "description": "Earl Grey, Camomile, English Breakfast, ...",
+    "price": 0.50,
+    "stock": 50,
+    "image": "https://www.colosoul.com.au/wp-content/uploads/2016/08/Dollarphotoclub_75628098-e1422257536867.jpg"
   },
   {
     "id": 3,
     "name": "Coffee",
-    "description": "yummy yummy yummy",
-    "price": 99.90,
-    "stock": 10
+    "description": "Blend 43 Instant.",
+    "price": 0.20,
+    "stock": 80,
+    "image": "https://assets.precisionnutrition.com/wp-content/uploads/2010/01/cup-of-black-coffee1.jpg"
   },
   {
     "id": 4,
     "name": "Milk",
-    "description": "yummy yummy yummy",
-    "price": 99.90,
-    "stock": 10
+    "description": "Fresh Coles milk.",
+    "price": 0.40,
+    "stock": 30,
+    "image": "http://thenutritionpress.com/wp-content/uploads/2015/06/fdc82cea5aae2bac_640_glass-of-milk.png"
   },
   {
     "id": 5,
-    "name": "Jam",
-    "description": "yummy yummy yummy",
-    "price": 99.90,
-    "stock": 10
+    "name": "Strawberry Jam",
+    "description": "Jam made from strawberries.",
+    "price": 0.20,
+    "stock": 40,
+    "image": "https://search.chow.com/thumbnail/800/0/www.chowstatic.com/assets/2015/08/31544_strawberry_jam_inline_640_7.jpg"
   },
   {
     "id": 6,
     "name": "Bread",
-    "description": "yummy yummy yummy",
-    "price": 99.90,
-    "stock": 10
+    "description": "Coles wholemeal bread.",
+    "price": 0.20,
+    "stock": 20,
+    "image": "http://i2.mirror.co.uk/incoming/article7559668.ece/ALTERNATES/s615b/Loaf-of-white-sliced-bread.jpg"
   },
   {
     "id": 7,
     "name": "Butter",
-    "description": "yummy yummy yummy",
-    "price": 99.90,
-    "stock": 10
+    "description": "I can't believe it's not butter.",
+    "price": 0.20,
+    "stock": 50,
+    "image": "https://www.meghantelpner.com/wp-content/uploads/2009/05/butter.jpg"
   }
 ]

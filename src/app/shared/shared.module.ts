@@ -8,12 +8,13 @@ import { PaginationModule } from './pagination/pagination.module';
 
 import { CapitalizePipe } from './pipes/capitalize.pipe';
 import { TrimPipe } from './pipes/trim.pipe';
+import { TruncatePipe } from './pipes/truncate.pipe';
 import { SortByDirective } from './directives/sortby.directive';
 
 @NgModule({
   imports: [CommonModule, MapModule, FilterTextboxModule, PaginationModule ],
-  exports: [ CommonModule, FormsModule, CapitalizePipe, TrimPipe, SortByDirective,
+  exports: [ CommonModule, FormsModule, CapitalizePipe, TrimPipe, TruncatePipe, SortByDirective,
              MapModule, FilterTextboxModule, PaginationModule ],
-  declarations: [ CapitalizePipe, TrimPipe, SortByDirective ]
+  declarations: [ CapitalizePipe, TrimPipe, TruncatePipe, SortByDirective ]
 })
 export class SharedModule { }

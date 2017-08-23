@@ -82,20 +82,6 @@ export class DataService {
                    .catch(this.handleError)
     }
 
-    handleError(error: any) {
-        console.error('server error:', error)
-        if (error instanceof Response) {
-          let errMessage = ''
-          try {
-            errMessage = error.json().error
-          } catch (err) {
-            errMessage = error.statusText
-          }
-          return Observable.throw(errMessage)
-        }
-        return Observable.throw(error || 'Node.js server error')
-    }
-
     /************************
      * Items API
      ************************/
@@ -131,6 +117,20 @@ export class DataService {
     /************************
      * Helper Functions
      ************************/
+
+    handleError(error: any) {
+        console.error('server error:', error)
+        if (error instanceof Response) {
+          let errMessage = ''
+          try {
+            errMessage = error.json().error
+          } catch (err) {
+            errMessage = error.statusText
+          }
+          return Observable.throw(errMessage)
+        }
+        return Observable.throw(error || 'Node.js server error')
+    }
 
     //Not using now but leaving since they show how to create
     //and work with custom observables
